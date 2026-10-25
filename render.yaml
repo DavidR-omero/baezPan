@@ -1,0 +1,8 @@
+# Render Blueprint — BAEZPAN (web estática, plan gratuito)
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: baezpan
+    runtime: static
+    staticPublishPath: ./
+    autoDeployTrigger: commit

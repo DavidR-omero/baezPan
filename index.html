@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BAEZPAN - Panadería, pastelería y bollería artesana en Móstoles. Pan artesano, horno propio y servicio a domicilio desde hace casi 35 años.">
+  <meta name="theme-color" content="#3b2412">
+  <title>BAEZPAN | Panadería Artesana en Móstoles</title>
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+  <!-- ===== BARRA DE PROGRESO DE LECTURA ===== -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="inicio">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand">
+        <img src="imagenes/logo_baezpan.png" alt="BAEZPAN - Artesanía del pan y pastelería" class="brand-logo" width="284" height="156">
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#productos" class="nav-link">Productos</a>
+        <a href="#obrador" class="nav-link">El obrador</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#opiniones" class="nav-link">Opiniones</a>
+        <a href="#faq" class="nav-link">Preguntas</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Cambiar modo oscuro" title="Modo oscuro">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <a href="tel:+34916131114" class="btn btn-phone">📞 Pedir por teléfono</a>
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="badge">🏆 Casi 35 años horneando en Móstoles</span>
+        <h1>El aroma de un pan<br><span>hecho a mano</span> cada día</h1>
+        <p class="hero-text">
+          Panadería familiar con <strong>horno propio</strong>. Pan artesano, bollería,
+          pasteles y tartas elaborados con <strong>productos 100% naturales</strong>.
+        </p>
+        <div class="hero-actions">
+          <a href="#productos" class="btn btn-primary">Ver productos</a>
+          <a href="#contacto" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+        <ul class="hero-features">
+          <li><i>✅</i> Horno propio</li>
+          <li><i>✅</i> 100% natural</li>
+          <li><i>✅</i> Servicio a domicilio</li>
+          <li><i>✅</i> Por encargo</li>
+        </ul>
+      </div>
+
+      <!-- TARTA GIGANTE 3D GIRATORIA -->
+      <div class="hero-stage" aria-hidden="true">
+        <div class="cake-scene">
+          <div class="sun-glow"></div>
+
+          <!-- Elementos que emergen y flotan -->
+          <div class="orbit">
+            <span class="float-item f1">🥐</span>
+            <span class="float-item f2">🍞</span>
+            <span class="float-item f3">🍪</span>
+            <span class="float-item f4">🥧</span>
+            <span class="float-item f5">🥖</span>
+            <span class="float-item f6">🧁</span>
+            <span class="float-item f7">🍩</span>
+            <span class="float-item f8">🍰</span>
+          </div>
+
+          <!-- Migajas / partículas -->
+          <span class="crumb c1"></span><span class="crumb c2"></span>
+          <span class="crumb c3"></span><span class="crumb c4"></span>
+          <span class="crumb c5"></span><span class="crumb c6"></span>
+
+          <!-- La tarta gigante 3D que gira (caras generadas en JS) -->
+          <div class="cake">
+            <div class="cake3d" id="cake3d"></div>
+          </div>
+
+          <div class="cake-shadow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== TICKER DE SERVICIOS ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>🥖 Pan candeal</span><span>🍞 Hogazas</span><span>🥐 Bollería artesana</span>
+      <span>🎂 Tartas por encargo</span><span>🍪 Pastas caseras</span><span>🚚 Servicio a domicilio</span>
+      <span>🥖 Pan candeal</span><span>🍞 Hogazas</span><span>🥐 Bollería artesana</span>
+      <span>🎂 Tartas por encargo</span><span>🍪 Pastas caseras</span><span>🚚 Servicio a domicilio</span>
+    </div>
+  </div>
+  <!-- ===== SERVICIOS ===== -->
+  <section class="services">
+    <div class="container services-grid">
+      <div class="service reveal" data-delay="1"><span>🍞</span><p><strong>Panadería Artesana</strong><small>Pan candeal, hogazas y más</small></p></div>
+      <div class="service reveal" data-delay="2"><span>🎂</span><p><strong>Pastelería Artesana</strong><small>Pasteles y tartas</small></p></div>
+      <div class="service reveal" data-delay="3"><span>🥐</span><p><strong>Bollería Artesana</strong><small>Recién hecho cada día</small></p></div>
+      <div class="service reveal" data-delay="4"><span>🍝</span><p><strong>Pastas</strong><small>Elaboración propia</small></p></div>
+      <div class="service reveal" data-delay="4"><span>🚚</span><p><strong>Servicio a Domicilio</strong><small>Te lo llevamos a casa</small></p></div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTOS ===== -->
+  <section class="section" id="productos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Nuestro surtido</span>
+        <h2>Productos de horno propio</h2>
+        <p>Pulsa en cualquier producto para ver todos los detalles.</p>
+      </div>
+
+      <div class="filters reveal" id="filters" role="tablist">
+        <button class="chip active" data-filter="all">Todos</button>
+        <button class="chip" data-filter="pan">🥖 Pan</button>
+        <button class="chip" data-filter="bolleria">🥐 Bollería</button>
+        <button class="chip" data-filter="pasteleria">🎂 Pastelería</button>
+        <button class="chip" data-filter="pasta">🍝 Pastas</button>
+      </div>
+
+      <div class="cards" id="productGrid"></div>
+    </div>
+  </section>
+  <!-- ===== EL OBRADOR ===== -->
+  <section class="section section-alt" id="obrador">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Dentro de la casa</span>
+        <h2>Así nace nuestro pan</h2>
+        <p>Cuatro pasos, el mismo oficio de siempre. Toca cada paso para descubrirlo.</p>
+      </div>
+
+      <div class="steps" id="steps">
+        <button class="step reveal" data-delay="1" data-step="1">
+          <span class="step-num">1</span><span class="step-emoji">🌾</span>
+          <strong>Masa madre</strong><small>Harina y fermentación lenta</small>
+        </button>
+        <button class="step reveal" data-delay="2" data-step="2">
+          <span class="step-num">2</span><span class="step-emoji">👐</span>
+          <strong>Amasado a mano</strong><small>El toque que no se olvida</small>
+        </button>
+        <button class="step reveal" data-delay="3" data-step="3">
+          <span class="step-num">3</span><span class="step-emoji">🔥</span>
+          <strong>Horno propio</strong><small>Desde muy temprano</small>
+        </button>
+        <button class="step reveal" data-delay="4" data-step="4">
+          <span class="step-num">4</span><span class="step-emoji">🧺</span>
+          <strong>A tu mesa</strong><small>En la tienda o en casa</small>
+        </button>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <figure class="shot reveal" data-caption="Nuestro pan candeal recién salido del horno"><span>🍞</span><figcaption>Pan candeal</figcaption></figure>
+        <figure class="shot reveal" data-delay="1" data-caption="Hogazas de masa madre con harina natural"><span>🥖</span><figcaption>Hogazas</figcaption></figure>
+        <figure class="shot reveal" data-delay="2" data-caption="Bollería artesana recién hecha cada mañana"><span>🥐</span><figcaption>Bollería</figcaption></figure>
+        <figure class="shot reveal" data-delay="3" data-caption="Tartas personalizadas por encargo"><span>🎂</span><figcaption>Tartas</figcaption></figure>
+        <figure class="shot reveal" data-delay="4" data-caption="Pastas caseras de elaboración propia"><span>🍝</span><figcaption>Pastas</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section class="section" id="nosotros">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Quiénes somos</span>
+        <h2>Una panadería familiar</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            <strong>BAEZPAN</strong> es una panadería familiar que cuenta con casi
+            <strong>35 años de experiencia</strong>. Nos dedicamos a la elaboración de todo tipo
+            de pan artesano, destacando el <strong>pan candeal</strong> y nuestro gran surtido de
+            bollería, pastas, pasteles y tartas.
+          </p>
+          <p>
+            Nuestro obrador es conocido en gran parte de la zona, debido al sabor de sus productos
+            artesanos, hechos de manera tradicional, <strong>100% naturales</strong> y
+            añadiéndoles muchas dosis de cariño y paciencia.
+          </p>
+          <ul class="check-list">
+            <li>Pan de gran calidad con productos naturales</li>
+            <li>Elaboración artesanal y tradicional</li>
+            <li>Horno propio en la tienda</li>
+            <li>Trabajos por encargo</li>
+            <li>Servicio a domicilio</li>
+          </ul>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat reveal" data-delay="1"><strong data-count="35">35</strong><span>años de oficio</span></div>
+          <div class="stat reveal" data-delay="2"><strong data-count="100" data-suffix="%">100%</strong><span>productos naturales</span></div>
+          <div class="stat reveal" data-delay="3"><strong data-count="262">262</strong><span>opiniones positivas</span></div>
+          <div class="stat reveal" data-delay="4"><strong>∞</strong><span>cariño y paciencia</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OPINIONES ===== -->
+  <section class="section section-alt" id="opiniones">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Lo que dicen de nosotros</span>
+        <h2>4,4 ★ de valoración media</h2>
+        <p>Opiniones de clientes reales en Google.</p>
+      </div>
+
+      <div class="reviews reveal">
+        <button class="rev-arrow" id="revPrev" aria-label="Anterior">‹</button>
+        <div class="rev-viewport">
+          <div class="rev-track" id="revTrack"></div>
+        </div>
+        <button class="rev-arrow" id="revNext" aria-label="Siguiente">›</button>
+      </div>
+      <div class="rev-dots" id="revDots"></div>
+    </div>
+  </section>
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Todo lo que nos preguntáis</h2>
+      </div>
+
+      <div class="accordion" id="accordion">
+        <div class="acc-item reveal">
+          <button class="acc-head">¿Hacéis tartas por encargo?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Sí. Trabajamos tartas y pasteles por encargo para cumpleaños, bautizos, comuniones y cualquier celebración. Te recomendamos pedir con 48 horas de antelación para que salga perfecta.</p></div>
+        </div>
+        <div class="acc-item reveal" data-delay="1">
+          <button class="acc-head">¿Lleváis a domicilio?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Ofrecemos servicio a domicilio en la zona. Llámanos al 916 13 11 14 o al 605 96 28 18 y te lo preparamos.</p></div>
+        </div>
+        <div class="acc-item reveal" data-delay="2">
+          <button class="acc-head">¿Tenéis pan integral o sin gluten?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Elaboramos pan integral, de semillas y hogazas. Si necesitas una opción especial, pregúntanos en tienda: te informamos de la disponibilidad del día.</p></div>
+        </div>
+        <div class="acc-item reveal" data-delay="3">
+          <button class="acc-head">¿A qué hora abrís?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Consulta el horario en la sección de contacto. Te aconsejamos venir temprano para encontrar todo el surtido recién hecho.</p></div>
+        </div>
+        <div class="acc-item reveal" data-delay="4">
+          <button class="acc-head">¿Podemos recoger un pedido grande?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Claro. Para pedidos grandes (cenas, celebraciones, empresas) preparamos todo con antelación. Cuéntanos qué necesitas y lo dejamos listo a la hora que nos digas.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section section-alt" id="contacto">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Visítanos</span>
+        <h2>Contacto y ubicación</h2>
+        <p>Estamos en el corazón de Móstoles. ¡Te esperamos!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <p>C/ Cartalla, 17 (Esq. Humanes, 11)<br>28937 Móstoles (Madrid)</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Calle+Cartalla+17,+28937+M%C3%B3stoles" target="_blank" rel="noopener">Cómo llegar →</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Teléfonos</strong>
+              <p>
+                <a href="tel:+34916131114">916 13 11 14</a><br>
+                <a href="tel:+34605962818">605 96 28 18</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">📧</span>
+            <div>
+              <strong>E-mail</strong>
+              <p><a href="mailto:mariano.martinez@gmx.de">mariano.martinez@gmx.de</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🕒</span>
+            <div>
+              <strong>Horario</strong>
+              <div class="schedule" id="schedule"></div>
+              <span class="open-badge" id="openBadge"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-side">
+          <div class="map-wrap reveal" data-delay="1">
+            <iframe
+              title="Mapa BAEZPAN Móstoles"
+              src="https://www.google.com/maps?q=Baezpan%20M%C3%B3stoles&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+
+          <form class="order-form reveal" data-delay="2" id="orderForm" novalidate>
+            <h3>📝 Prepara tu pedido</h3>
+            <p class="form-hint">Rellena y te llamamos para confirmarlo.</p>
+            <div class="field-row">
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+              <input type="tel" name="telefono" placeholder="Teléfono" required>
+            </div>
+            <select name="tipo">
+              <option value="Pan y bollería">Pan y bollería</option>
+              <option value="Tarta por encargo">Tarta por encargo</option>
+              <option value="Pastas">Pastas</option>
+              <option value="Pedido grande">Pedido grande / celebración</option>
+            </select>
+            <textarea name="notas" rows="3" placeholder="Cuéntanos qué necesitas..."></textarea>
+            <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand-box">
+        <img src="imagenes/logo_baezpan.png" alt="BAEZPAN" class="footer-logo" width="142" height="78">
+        <p>Artesanía del pan · Pastelería · Móstoles</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#productos">Productos</a>
+        <a href="#obrador">El obrador</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer-copy">© <span id="year"></span> BAEZPAN. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===== BOTÓN WHATSAPP ===== -->
+  <a class="wa-float" href="https://wa.me/34605962818?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.5c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22c-1.8 0-3.5-.5-5-1.3l-.4-.2-4.9.9.9-4.8-.2-.4c-.9-1.6-1.4-3.4-1.4-5.2 0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10zm5.5-7.5c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+    <span class="wa-text">Pide por WhatsApp</span>
+  </a>
+
+  <!-- ===== BOTÓN SUBIR ===== -->
+  <button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+
+  <!-- ===== MODAL DE DETALLE ===== -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <div class="modal-emoji" id="modalEmoji"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="modal-features" id="modalFeatures"></div>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-actions">
+        <a href="#contacto" class="btn btn-primary" id="modalOrder">Pedir este producto</a>
+        <button class="btn btn-ghost-light" id="modalBack">Seguir mirando</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
